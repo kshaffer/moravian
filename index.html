@@ -1,0 +1,740 @@
+<!doctype html>
+<html lang="en">
+
+	<head>
+		<meta charset="utf-8">
+
+		<title>Modeling Musical Meaning: An Introduction to Computational Musicology</title>
+
+		<meta name="description" content="Modeling Musical Meaning: An Introduction to Computational Musicology">
+		<meta name="author" content="Kris Shaffer, Ph.D.">
+
+		<meta name="apple-mobile-web-app-capable" content="yes" />
+		<meta name="apple-mobile-web-app-status-bar-style" content="black-translucent" />
+
+		<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, minimal-ui">
+
+		<link rel="stylesheet" href="css/reveal.css">
+		<link rel="stylesheet" href="css/theme/black.css" id="theme">
+
+		<!-- Code syntax highlighting -->
+		<link rel="stylesheet" href="lib/css/zenburn.css">
+
+		<!-- Printing and PDF exports -->
+		<script>
+			var link = document.createElement( 'link' );
+			link.rel = 'stylesheet';
+			link.type = 'text/css';
+			link.href = window.location.search.match( /print-pdf/gi ) ? 'css/print/pdf.css' : 'css/print/paper.css';
+			document.getElementsByTagName( 'head' )[0].appendChild( link );
+		</script>
+
+		<!--[if lt IE 9]>
+		<script src="lib/js/html5shiv.js"></script>
+		<![endif]-->
+	</head>
+
+	<body>
+
+		<div class="reveal">
+
+			<!-- Any section element inside of this container is displayed as a slide -->
+			<div class="slides">
+				<section data-background="images/bletchley.jpg">
+					<h1>Modeling Musical Meaning</h1>
+					<h2>An Introduction to Computational Musicology</h2>
+					<br/>
+					<h3>Kris Shaffer, Ph.D.<br/>CU–Boulder</h3>
+					<p>
+						<small><a href="http://kris.shaffermusic.com">kris.shaffermusic.com</a> / <a href="http://twitter.com/krisshaffer">@krisshaffer</a><br/><br/>view presentation (with live links) at <a href="http://kris.shaffermusic.com/infohcc">kris.shaffermusic.com/infohcc</a><br/>fork presentation at <a href="http://github.com/kshaffer/infohcc">github.com/kshaffer/infohcc</a></small>
+					</p>
+				</section>
+
+				<section data-markdown data-background="images/bletchley.jpg">
+					<script type="text/template">
+						<p style="font-size: 1.3em">kris.shaffermusic.com/infohcc</p>
+					</script>
+				</section>
+
+				<section data-markdown data-background="images/bletchley.jpg">
+					<script type="text/template">
+						## What is computational musicology?
+					</script>
+				</section>
+
+				<section data-markdown data-background="images/bletchley.jpg">
+					<script type="text/template">
+						## Harmonic Syntax
+
+						- How often do certain chords occur?
+						- How often do certain chord progressions occur?
+					</script>
+				</section>
+
+				<section data-markdown data-background="images/bletchley.jpg">
+					<script type="text/template">
+						![](images/cathedrals.png)
+
+						"Cathedrals," Jump Little Children
+					</script>
+				</section>
+
+				<section data-markdown data-background="images/bletchley.jpg">
+					<script type="text/template">
+						![](images/mozart.png)
+
+						W.A. Mozart, Piano Sonata, K. 283, ii.
+					</script>
+				</section>
+
+				<section data-markdown data-background="images/bletchley.jpg">
+					<script type="text/template">
+						## McGill Billboard Project
+
+						[https://ddmal.music.mcgill.ca/billboard](https://ddmal.music.mcgill.ca/billboard)
+
+						- Over 1000 songs selected from the Billboard *Hot 100* singles chart (1958–1991)
+						- Randomly sampled from the charts, with constraints to ensure all eras represented, and all regions of the chart represented (top 20, 21–40, etc.)
+					</script>
+				</section>
+
+				<section data-markdown data-background="images/bletchley.jpg">
+					<script type="text/template">
+						John Ashley Burgoyne<br/>["Stochastic Processes and Database-Driven Musicology"](http://oatd.org/oatd/record?record=oai%5C:digitool.library.mcgill.ca%5C:107704) (2011). Ph.D. diss., McGill University.
+					</script>
+				</section>
+
+				<section data-markdown data-background="images/bletchley.jpg">
+					<script type="text/template">
+						![](images/burgoyne.png)
+
+						Ashley Burgoyne, chord root occurrence by decade in the McGill Billboard corpus
+					</script>
+				</section>
+
+				<section data-markdown data-background="images/bletchley.jpg">
+					<script type="text/template">
+						![](images/tpcorpus.png)
+						Transitional probabilities in McGill Billboard corpus
+					</script>
+				</section>
+
+				<section data-markdown data-background="images/bletchley.jpg">
+					<script type="text/template">
+						Walter Everett<br/>
+						["Making Sense of Rock's Tonal Systems"](http://www.mtosmt.org/issues/mto.04.10.4/mto.04.10.4.w_everett.html) (2004).<br/>
+						*Music Theory Online* 10/4.
+						<br/><br/>
+						["Harmony in pop/rock music."](http://openmusictheory.com/popRockHarmony.html)<br/> Hughes/Moseley/Shaffer, *Open Music Theory.*
+					</script>
+				</section>
+
+				<section data-markdown data-background="images/bletchley.jpg">
+					<script type="text/template">
+						![](images/tpcluster1.png)
+						Transitional probabilities in McGill Billboard corpus,<br/>cluster 1 (classical-based)
+					</script>
+				</section>
+
+				<section data-markdown data-background="images/bletchley.jpg">
+					<script type="text/template">
+						![](images/tpcluster2.png)
+						Transitional probabilities in McGill Billboard corpus,<br/>cluster 2 (circle-of-fifths)
+					</script>
+				</section>
+
+				<section data-markdown data-background="images/bletchley.jpg">
+					<script type="text/template">
+						![](images/tpcluster3.png)
+						Transitional probabilities in McGill Billboard corpus,<br/>cluster 3 (misfits)
+					</script>
+				</section>
+
+				<section data-markdown data-background="images/bletchley.jpg">
+					<script type="text/template">
+						![](images/tpcluster4.png)
+						Transitional probabilities in McGill Billboard corpus,<br/>cluster 4 (plagal)
+					</script>
+				</section>
+
+				<section data-markdown data-background="images/bletchley.jpg">
+					<script type="text/template">
+						![](images/tpcluster5.png)
+						Transitional probabilities in McGill Billboard corpus,<br/>cluster 5 (modal)
+					</script>
+				</section>
+
+				<section data-markdown data-background="images/bletchley.jpg">
+					<script type="text/template">
+						![](images/tpcluster6.png)
+						Transitional probabilities in McGill Billboard corpus,<br/>cluster 6 (blues-based)
+					</script>
+				</section>
+
+				<section data-markdown data-background="images/bletchley.jpg">
+					<script type="text/template">
+						<table>
+							<tr style="font-variant: small-caps">
+								<td>
+									Everett
+								</td>
+								<td>
+									Cluster
+								</td>
+							</tr>
+							<tr style="font-size: .8em">
+								<td>
+									Classical
+								</td>
+								<td>
+									Classical<br/>
+									Circle of fifths
+								</td>
+							</tr>
+							<tr style="font-size: .8em">
+								<td>
+									Blues
+								</td>
+								<td>
+									Blues
+								</td>
+							</tr>
+							<tr style="font-size: .8em">
+								<td>
+									Modal
+								</td>
+								<td>
+									Modal
+								</td>
+							</tr>
+							<tr style="font-size: .8em">
+								<td>
+									Minor pentatonic
+								</td>
+								<td>
+									Plagal
+								</td>
+							</tr>
+							<tr style="font-size: .8em">
+								<td>
+									Mixed (classical and modal)<br/>
+									Chromatic
+								</td>
+								<td>
+									Misfits
+								</td>
+							</tr>
+						</table>
+						<br/>
+
+					</script>
+				</section>
+
+				<section data-markdown data-background="images/bletchley.jpg">
+					<script type="text/template">
+						![](images/hmm.png)
+
+						<small>Christopher W. White & Ian Quinn (2013), "Expanding Notions of Harmonic Function Through a Corpus Analysis of the Bach Chorales"</small>
+					</script>
+				</section>
+
+				<section data-markdown data-background="images/bletchley.jpg">
+					<script type="text/template">
+						![](images/vasiete1.png)
+
+						Esther Vasiete (2013), "Automated chord recognition using Machine Learning techniques"
+					</script>
+				</section>
+
+				<section data-markdown data-background="images/bletchley.jpg">
+					<script type="text/template">
+						![](images/vasiete2.png)
+
+						Esther Vasiete (2013), "Automated chord recognition using Machine Learning techniques"
+					</script>
+				</section>
+
+				<section data-markdown data-background="images/bletchley.jpg">
+					<script type="text/template">
+						![](images/vasiete3.png)
+
+						Esther Vasiete (2013), "Automated chord recognition using Machine Learning techniques"
+					</script>
+				</section>
+
+					<section data-markdown data-background="images/bletchley.jpg">
+					<script type="text/template">
+						<table>
+							<tr style="font-size: .8em">
+								<td>
+									I want to suggest that talk of fricatives and plosives and open vowels can be extended beyond the private voice studio and mingled productively with discussion of modulatory schemes and metric dissonances and structural melodies. Indeed, I would argue that the expressive power of musicalized phonemes is as responsible for our emotional response to song as the semantic content of the words and the musical expression of that content. For listeners and composers alike, how words sound matters no less than what they mean.
+								</td>
+							</tr>
+						</table>
+						<br/>
+						Stephen Rodgers, "The Fourth Dimension of a Song," *Music Theory Spectrum* 37/1
+					</script>
+				</section>
+
+				<section data-markdown data-background="images/bletchley.jpg">
+					<script type="text/template">
+						<table>
+							<tr style="font-size: .8em">
+								<td>
+									Heil'ge Nacht, du sinkest nieder;<br/>
+									Nieder wallen auch die Träume<br/>
+									Wie dein Licht durch die Räume,<br/>
+									Durch der Menschen stille Brust.<br/><br/>
+									Die belauschen sie mit Lust;<br/>
+									Rufen, wenn der Tag erwacht:<br/>
+									Kehre wieder, heil'ge Nacht!<br/>
+									Holde Träume, kehret wieder!<br/>
+								</td>
+								<td>
+									Holy night, you sink down;<br/>
+									Dreams too float down,<br/>
+									Like your moonlight through space,<br/>
+									Through the silent hearts of men.<br/><br/>
+									They listen with delight;<br/>
+									Cry out when day awakes:<br/>
+									Come back, fair night!<br/>
+									Fair dreams, come back!
+								</td>
+							</tr>
+						</table>
+						<br/>
+						"Nacht und Träume," by Matthäus von Collin
+					</script>
+				</section>
+
+				<section data-markdown data-background="images/bletchley.jpg">
+					<script type="text/template">
+						![](images/nacht4-9.png)
+
+						Schubert & Collin, "Nacht und Träume," mm. 4–9
+					</script>
+				</section>
+
+				<section data-markdown data-background="images/bletchley.jpg">
+					<script type="text/template">
+						<table>
+							<tr style="font-size: .8em">
+								<td>
+									Heil'ge Nacht, du sinkest nieder;<br/>
+									Nieder wallen auch die Träume<br/>
+									Wie dein Licht durch die Räume,<br/>
+									Durch der Menschen stille Brust.<br/><br/>
+									Die belauschen sie mit Lust;<br/>
+									Rufen, wenn der Tag erwacht:<br/>
+									Kehre wieder, heil'ge Nacht!<br/>
+									Holde Träume, kehret wieder!<br/>
+								</td>
+								<td>
+									Holy night, you sink down;<br/>
+									Dreams too float down,<br/>
+									Like your moonlight through space,<br/>
+									Through the silent hearts of men.<br/><br/>
+									They listen with delight;<br/>
+									Cry out when day awakes:<br/>
+									Come back, fair night!<br/>
+									Fair dreams, come back!
+								</td>
+							</tr>
+						</table>
+						<br/>
+						"Nacht und Träume," by Matthäus von Collin
+					</script>
+				</section>
+
+				<section data-markdown data-background="images/bletchley.jpg">
+					<script type="text/template">
+						![](images/nacht16-23.png)
+
+						Schubert & Collin, "Nacht und Träume," mm. 16–23
+					</script>
+				</section>
+
+				<section data-markdown data-background="images/bletchley.jpg">
+					<script type="text/template">
+						<table>
+							<tr style="font-size: .8em">
+								<td>
+									Heil'ge Nacht, du sinkest nieder;<br/>
+									Nieder wallen auch die Träume<br/>
+									Wie dein Licht durch die Räume,<br/>
+									Durch der Menschen stille Brust.<br/><br/>
+									Die belauschen sie mit Lust;<br/>
+									Rufen, wenn der Tag erwacht:<br/>
+									Kehre wieder, heil'ge Nacht!<br/>
+									Holde Träume, kehret wieder!<br/>
+								</td>
+								<td>
+									Holy night, you sink down;<br/>
+									Dreams too float down,<br/>
+									Like your moonlight through space,<br/>
+									Through the silent hearts of men.<br/><br/>
+									They listen with delight;<br/>
+									Cry out when day awakes:<br/>
+									Come back, fair night!<br/>
+									Fair dreams, come back!
+								</td>
+							</tr>
+						</table>
+						<br/>
+						"Nacht und Träume," by Matthäus von Collin
+					</script>
+				</section>
+
+				<section data-markdown data-background="images/bletchley.jpg">
+					<script type="text/template">
+						Can we use software to identify songs worthy of a closer look?
+
+					</script>
+				</section>
+
+				<section data-markdown data-background="images/bletchley.jpg">
+					<script type="text/template">
+						- Create a corpus of phonetically encoded text and music
+						- Mathematically model what Stephen has already found
+						- Write software to search for those structures in the corpus
+					</script>
+				</section>
+
+				<section data-markdown data-background="images/bletchley.jpg">
+					<script type="text/template">
+						## Encoding the data
+					</script>
+				</section>
+
+				<section data-markdown data-background="images/bletchley.jpg">
+					<script type="text/template">
+						<table>
+							<tr>
+								<td style="font-size: 0.8em">
+									Heil'ge Nacht, du sinkest nieder;<br/>
+									Nieder wallen auch die Träume<br/>
+									Wie dein Licht durch die Räume,<br/>
+									Durch der Menschen stille Brust.<br/><br/>
+									Die belauschen sie mit Lust;<br/>
+									Rufen, wenn der Tag erwacht:<br/>
+									Kehre wieder, heil'ge Nacht!<br/>
+									Holde Träume, kehret wieder!<br/>
+								</small></td>
+								<td style="font-size: 0.8em">
+									'ha:Il.gə 'naχt du 'zIŋ.kəst 'ni.dəʁ<br/>
+									'ni.dəʁ 'va.lən 'a:ʊχ di 'trɔ:Y.mə<br/>
+									'vi da:In 'mont.lIçt 'dʊɾç di 'ɾɔ:Y.mə<br/>
+									'dʊɾç deʁ 'mɛn.ʃən 'ʃtI.lə 'bɾʊst<br/><br/>
+									'di bə.'la:ʊ.ʃən 'zi mIt 'lʊst<br/>
+									'ɾu.fən 'vɛn deʁ 'tak ɛɾ.'vaχt<br/>
+									'ke.ɾə 'vi.dəʁ 'ha:I.lgə 'naχt<br/>
+									'hɔl.də 'tɾɔ:Y.mə 'ke.ɾət 'vi.dəʁ<br/>
+								</small></td>
+							</tr>
+						</table><br/>
+						"Nacht und Träume," German text and IPA transcription
+					</script>
+				</section>
+
+				<section data-markdown data-background="images/bletchley.jpg">
+					<script type="text/template">
+						![](images/ipamusic.png)
+
+						Schubert & Müller, "Die liebe Farbe," Lines 1–3
+					</script>
+				</section>
+
+				<section data-markdown data-background="images/bletchley.jpg">
+					<script type="text/template">
+						## The statistical model
+					</script>
+				</section>
+
+			<section data-markdown data-background="images/bletchley.jpg">
+					<script type="text/template">
+						<table>
+							<tr>
+								<td>
+									Heil'ge Nacht, du sinkest nieder;<br/>
+									Nieder wallen auch die Träume<br/>
+									Wie dein Licht durch die Räume,<br/>
+									Durch der Menschen stille, stille Brust.<br/><br/>
+									Die belauschen sie mit Lust;<br/>
+									Die belauschen sie mit Lust;<br/>
+									Rufen, wenn der Tag erwacht:<br/>
+									Kehre wieder, heil'ge Nacht!<br/>
+									Holde Träume, kehret wieder!<br/>
+									Holde Träume, kehret wieder!<br/>
+								</small></td>
+							</tr>
+						</table><br/>
+						Collin's "Nacht und Träume," as set by Schubert
+					</script>
+				</section>
+
+
+				<section data-markdown data-background="images/bletchley.jpg">
+					<script type="text/template">
+						![](images/vowels.png)
+
+						International Phonetic Alphabet (IPA) <a href="https://en.wikipedia.org/wiki/File:The_International_Phonetic_Alphabet_(revised_to_2015).pdf">vowel chart</a>
+					</script>
+				</section>
+
+				<section data-markdown data-background="images/bletchley.jpg">
+						<script type="text/template">
+							<table>
+								<tr>
+									<td>
+										Heil'ge Nacht, du sinkest nieder;<br/>
+										Nieder wallen auch die Träume<br/>
+										Wie dein Licht durch die Räume,<br/>
+										Durch der Menschen stille, stille Brust.<br/><br/>
+										Die belauschen sie mit Lust;<br/>
+										Die belauschen sie mit Lust;<br/>
+										Rufen, wenn der Tag erwacht:<br/>
+										Kehre wieder, heil'ge Nacht!<br/>
+										Holde Träume, kehret wieder!<br/>
+										Holde Träume, kehret wieder!<br/>
+									</small></td>
+								</tr>
+							</table><br/>
+							Collin's "Nacht und Träume," as set by Schubert
+						</script>
+					</section>
+
+					<section data-markdown data-background="images/bletchley.jpg">
+						<script type="text/template">
+							![](images/nachtundtraume3d.png)
+
+							"Nacht und Träume," vowel category probability by line
+						</script>
+					</section>
+
+					<section data-markdown data-background="images/bletchley.jpg">
+						<script type="text/template">
+							![](images/nachtundtraumedistance.png)
+
+							"Nacht und Träume," vowel probability difference as Euclidean distance
+						</script>
+					</section>
+
+					<section data-markdown data-background="images/bletchley.jpg">
+						<script type="text/template">
+							![](images/corpusdistance.png)
+
+							*The Lieder Project* corpus, vowel probability difference as Euclidean distance (ranked)
+						</script>
+					</section>
+
+					<section data-markdown data-background="images/bletchley.jpg">
+						<script type="text/template">
+							## Z-normalization
+							<br/>
+
+							- What is the standard deviation for line-to-line distance in each individual song?<br/>
+							(the standard rate of change)
+							<br/><br/>
+							- Z-normalized distance = raw distance / standard devation<br/>
+							(how big a deal is the change in the context of the song)
+							<br/><br/>
+							- Z-normalized distance allows us to interpret contextually and compare globally
+						</script>
+					</section>
+
+					<section data-markdown data-background="images/bletchley.jpg">
+						<script type="text/template">
+							![](images/corpusdistancez.png)
+
+							*The Lieder Project* corpus, vowel probability difference as Z-normalized distance (ranked)
+						</script>
+					</section>
+
+					<section data-markdown data-background="images/bletchley.jpg">
+							<script type="text/template">
+								<table>
+									<tr style="font-size: 0.6em">
+										<td>
+											Den Morgenwinden möcht ich's hauchen ein,<br/>
+											Ich möcht es säuseln durch den regen Hain;<br/>
+											Oh, leuchtet' es aus jedem Blumenstern!<br/>
+											Trüg es der Duft zu ihr von nah und fern!<br/>
+											Ihr Wogen, könnt ihr nichts als Räder treiben?<br/>
+											Dein ist mein Herz und soll es ewig bleiben.
+										</td>
+										<td>
+											I’d like to breathe it into the morning breezes,<br/>
+											I’d like to blow it through the stirring grove;<br/>
+											Oh, if it could only glow from every starry blossom!<br/>
+											If the scent could carry it to her from near and far!<br/>
+											You waves, can you only push wheels?<br/>
+											My heart is yours and will ever remain so.
+										</td>
+									</tr>
+								</table><br/>
+								"Ungeduld," by Wilhelm Müller<br/>
+								Stanza 3
+							</script>
+						</section>
+
+						<section data-markdown data-background="images/bletchley.jpg">
+							<script type="text/template">
+								![](images/ungeduldscore.png)
+
+								Schubert & Müller, "Ungeduld," Stanza 3 refrain
+							</script>
+						</section>
+
+						<section data-markdown data-background="images/bletchley.jpg">
+							<script type="text/template">
+								![](images/corpusdistance.png)
+
+								*The Lieder Project* corpus, vowel probability difference as Euclidean distance (ranked)
+							</script>
+						</section>
+
+						<section data-markdown data-background="images/bletchley.jpg">
+								<script type="text/template">
+									<table>
+										<tr style="font-size: 0.8em">
+											<td>
+												Ach Bächlein, liebes Bächlein,<br/>
+												Du meinst es so gut;<br/>
+												Ach Bächlein, aber weißt du,<br/>
+												Wie Liebe tut?<br/>
+												Ach unten, da unten<br/>
+												Die kühle Ruh!<br/>
+												Ach Bächlein, liebes Bächlein,<br/>
+												So singe nur zu.
+											</td>
+											<td>
+												Oh brook, dear brook,<br/>
+												You mean so well:<br/>
+												Oh brook, but do you know <br/>
+												What love does to you? <br/>
+												Ah, below, down there, <br/>
+												The cool repose!<br/>
+												Oh brook, dear brook,<br/>
+												Just sing to me.
+											</td>
+										</tr>
+									</table><br/>
+									"Der Müller und der Bach," by Wilhelm Müller<br/>
+									Stanza 3
+								</script>
+							</section>
+
+							<section data-markdown data-background="images/bletchley.jpg">
+								<script type="text/template">
+									![](images/dmudbscore.png)
+
+									Schubert & Müller, "Der Müller und der Bach," Lines 29–32
+								</script>
+							</section>
+
+								<section data-markdown data-background="images/bletchley.jpg">
+									<script type="text/template">
+										Can we use software to identify songs worthy of a closer look?
+									</script>
+								</section>
+
+								<section data-markdown data-background="images/bletchley.jpg">
+									<script type="text/template">
+										Can we use software to learn about general trends in a large collection of songs?
+									</script>
+								</section>
+
+								<section data-markdown data-background="images/bletchley.jpg">
+									<script type="text/template">
+										## Data to explore
+
+										- words/syllables
+										- specific phonemes
+										- phoneme categories
+										- poetic stress
+										- pitch height
+										- duration
+										- metric placement
+										- beat strength
+									</script>
+								</section>
+
+								<section data-markdown data-background="images/bletchley.jpg">
+									<script type="text/template">
+										## Warnings
+
+										- bad statistics
+										- bad theory
+										- checking theory at the door<br/>(to accommodate limited computational skills)
+									</script>
+								</section>
+
+								<section data-markdown data-background="images/bletchley.jpg">
+									<script type="text/template">
+										## resources
+
+										[Music Genre and Spotify Metadata.](http://scholarslab.org/uncategorized/music-genre-and-spotify-metadata/)
+
+										De Clercq, Trevor and David Temperley. 2011. ["A corpus analysis of rock harmony."](http://dx.doi.org/10.1017/S026114301000067X)
+
+										Yim, Gary. 2012. ["Affordant Harmony in Popular Music: Do Physical Attributes of the Guitar Influence Chord Sequences?"](http://icmpc―escom2012.web.auth.gr/sites/default/files/papers/1156_Proc.pdf)
+
+										[CorpusMusic group on GitHub](http://github.com/corpusmusic)
+
+										["A Corpus Study of Rock Music"](http://theory.esm.rochester.edu/rock_corpus/) ― Temperley/de Clercq
+
+										[The Million Song Dataset](http://labrosa.ee.columbia.edu/millionsong/) ― Columbia Univ.
+
+										[*Empirical Musicology Review.*](http://emusicology.org/)
+									</script>
+								</section>
+
+								<section data-background="images/bletchley.jpg">
+									<h1>Modeling Musical Meaning</h1>
+									<h2>An Introduction to Computational Musicology</h2>
+									<br/>
+									<h3>Kris Shaffer, Ph.D.<br/>CU–Boulder</h3>
+									<p>
+										<small><a href="http://kris.shaffermusic.com">kris.shaffermusic.com</a> / <a href="http://twitter.com/krisshaffer">@krisshaffer</a><br/><br/>view presentation (with live links) at <a href="http://kris.shaffermusic.com/infohcc">kris.shaffermusic.com/infohcc</a><br/>fork presentation at <a href="http://github.com/kshaffer/infohcc">github.com/kshaffer/infohcc</a></small>
+									</p>
+								</section>
+
+
+
+
+			</div>
+
+		</div>
+
+
+
+		<script src="lib/js/head.min.js"></script>
+		<script src="js/reveal.js"></script>
+
+		<script>
+
+			// Full list of configuration options available at:
+			// https://github.com/hakimel/reveal.js#configuration
+			Reveal.initialize({
+				controls: false,
+				progress: false,
+				history: true,
+				center: true,
+
+				transition: 'slide', // none/fade/slide/convex/concave/zoom
+
+				// Optional reveal.js plugins
+				dependencies: [
+					{ src: 'lib/js/classList.js', condition: function() { return !document.body.classList; } },
+					{ src: 'plugin/markdown/marked.js', condition: function() { return !!document.querySelector( '[data-markdown]' ); } },
+					{ src: 'plugin/markdown/markdown.js', condition: function() { return !!document.querySelector( '[data-markdown]' ); } },
+					{ src: 'plugin/highlight/highlight.js', async: true, condition: function() { return !!document.querySelector( 'pre code' ); }, callback: function() { hljs.initHighlightingOnLoad(); } },
+					{ src: 'plugin/zoom-js/zoom.js', async: true },
+					{ src: 'plugin/notes/notes.js', async: true }
+				]
+			});
+
+		</script>
+
+	</body>
+</html>
